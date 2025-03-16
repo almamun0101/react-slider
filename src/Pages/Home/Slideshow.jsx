@@ -33,12 +33,12 @@ const Slideshow = () => {
   return (
     <div className="container">
 
-    <div className="relative w-full max-w-large mx-auto py-5 px-30">
+    <div className="relative w-full max-w-large mx-auto py-5 px-20">
       {/* Image Display */}
       <img
         src={images[currentIndex]}
         alt={`Slide ${currentIndex + 1}`}
-        className="w-full h-64 md:h-100 object-cover rounded-lg shadow-lg transition-opacity duration-500"
+        className="w-full h-64 md:h-110 object-cover rounded-lg shadow-lg transition-opacity duration-500"
       />
 
       {/* Previous & Next Buttons */}
