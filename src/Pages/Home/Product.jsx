@@ -13,6 +13,7 @@ const Product = ({ product }) => {
       <img src={product.image} alt={product.name} className="w-full h-48 object-cover rounded-md" />
       <h3 className="text-xl font-semibold text-gray-800 mt-4">{product.name}</h3>
       <p className="text-lg font-bold text-gray-600 mt-2">${product.price}</p>
+      <p className="text-base font-medium text-gray-600 mt-2">Cat : {product.category}</p>
       <button
         onClick={handleAddToCart}
         className="bg-green-500 text-white py-2 px-4 rounded mt-4 hover:bg-green-600 transition"
