@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
+// Category.js
+import React from 'react';
 
-const Category = () => {
-  const [selectedCategory, setSelectedCategory] = useState(null);
-
+const Category = ({ selectedCategory, onSelectCategory }) => {
   const categories = [
     'Action',
     'Adventure',
@@ -13,12 +12,8 @@ const Category = () => {
     'Role Playing',
   ];
 
-  const handleCategorySelect = (category) => {
-    setSelectedCategory(category);
-  };
-
   return (
-    <div className="container text-left flex justify-between ">
+    <div className="container text-left flex justify-between">
       {/* Heading */}
       <h2 className="text-2xl font-bold text-gray-800 uppercase tracking-wide mb-6">
         Category
@@ -27,7 +22,7 @@ const Category = () => {
         {categories.map((category) => (
           <button
             key={category}
-            onClick={() => handleCategorySelect(category)}
+            onClick={() => onSelectCategory(category)}
             className={`px-4 py-2 m-2 text-sm rounded-md transition-all duration-300 ${
               selectedCategory === category
                 ? 'bg-blue-600 text-white'
@@ -38,13 +33,7 @@ const Category = () => {
           </button>
         ))}
       </div>
-      {selectedCategory && (
-        <div>
-          <h3 className="mt-4 text-xl font-semibold">
-            You selected: {selectedCategory}
-          </h3>
-        </div>
-      )}
+     
     </div>
   );
 };
